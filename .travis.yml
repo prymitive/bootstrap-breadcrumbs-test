@@ -38,5 +38,10 @@ install:
   - pip install django-bootstrap-breadcrumbs==0.7.2
   - pip install -Ur requirements-test.txt
 
+before_script:
+  - git clone https://github.com/prymitive/bootstrap-breadcrumbs.git
+  - cd bootstrap-breadcrumbs
+  - rm -fr django_bootstrap_breadcrumbs
+
 script:
   - py.test -v --pep8
