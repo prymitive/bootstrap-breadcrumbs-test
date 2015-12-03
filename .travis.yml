@@ -39,4 +39,4 @@ install:
   - pip install -Ur requirements-test.txt
 
 script:
-  - which py.test -v --pep8
+  - py.test -v --pep8
