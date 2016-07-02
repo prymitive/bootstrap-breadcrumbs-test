@@ -42,13 +42,13 @@ matrix:
 
 install:
   - pip install -U Django==$DJANGO
-  - pip install django-bootstrap-breadcrumbs==0.7.3
+  - pip install django-bootstrap-breadcrumbs==0.8
   - pip install -Ur requirements-test.txt
 
 before_script:
   - git clone https://github.com/prymitive/bootstrap-breadcrumbs.git
   - cd bootstrap-breadcrumbs
-  - git checkout v0.7.3
+  - git checkout v0.8
   - rm -fr django_bootstrap_breadcrumbs
 
 script:
