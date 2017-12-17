@@ -11,7 +11,7 @@ python:
 
 env:
   matrix:
-    - DJANGO=2.0rc1
+    - DJANGO=2.0
     - DJANGO=1.8.18
     - DJANGO=1.10.7
     - DJANGO=1.11
@@ -19,13 +19,13 @@ env:
 matrix:
   exclude:
     - python: "2.7"
-      env: DJANGO=2.0rc1
+      env: DJANGO=2.0
     - python: "3.3"
       env: DJANGO=1.10.7
     - python: "3.3"
       env: DJANGO=1.11
     - python: "3.3"
-      env: DJANGO=2.0rc1
+      env: DJANGO=2.0
     - python: "3.6"
       env: DJANGO=1.8.18
     - python: "3.6"
@@ -33,13 +33,13 @@ matrix:
 
 install:
   - pip install -U Django==$DJANGO
-  - pip install django-bootstrap-breadcrumbs==0.9.0rc1
+  - pip install django-bootstrap-breadcrumbs==0.9.0
   - pip install -Ur requirements-test.txt
 
 before_script:
   - git clone https://github.com/prymitive/bootstrap-breadcrumbs.git
   - cd bootstrap-breadcrumbs
-  - git checkout v0.9.0rc1
+  - git checkout v0.9.0
   - rm -fr django_bootstrap_breadcrumbs
 
 script:
