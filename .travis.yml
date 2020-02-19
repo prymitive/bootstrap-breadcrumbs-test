@@ -34,7 +34,7 @@ install:
 before_script:
   - git clone https://github.com/prymitive/bootstrap-breadcrumbs.git
   - cd bootstrap-breadcrumbs
-  - git checkout v0.9.1
+  - git checkout v0.9.2
   - rm -fr django_bootstrap_breadcrumbs
 
 script:
